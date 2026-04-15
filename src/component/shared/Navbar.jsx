@@ -26,11 +26,11 @@ const Navbar = () => {
 </MyNavlink>
             </li>
             <li>
-                <MyNavlink to={'/about'}><RiTimeLine />
+                <MyNavlink to={'/timeline'}><RiTimeLine />
 Timeline</MyNavlink>
             </li>
                 <li>
-                    <MyNavlink to={'/contact'}><TfiStatsUp />
+                    <MyNavlink to={'/stats'}><TfiStatsUp />
 Stats</MyNavlink>
                 </li>
             
