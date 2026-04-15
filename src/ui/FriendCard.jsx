@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router';
 
 const FriendCard = ({friend}) => {
     const getStatusStyle=(status)=>{
@@ -14,7 +15,7 @@ if(status==='Overdue'){
 }
     }
     return (
-        <div className="card bg-base-100  shadow-xl">
+        <Link to={`/friendDetails/${friend.id}`} className="card bg-base-100  shadow-xl">
   <figure>
     <img
        src={friend.picture}  className='rounded-full'/>
@@ -34,7 +35,7 @@ if(status==='Overdue'){
                 </div>
                 
   </div>
-</div>
+</Link>
         
     );
 };
