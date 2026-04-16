@@ -39,7 +39,7 @@ const Timeline = () => {
             </div>
             
             {
-                time.length===0?(<p className='text-2xl font-bold text-center bg-gray-300 py-20 rounded-xl'>No activity yet</p>)
+                time.length===0?(<p className='text-2xl font-bold text-center bg-gray-100 py-20 rounded-xl'>No activity yet</p>)
                 :
                 <>
                 {
