@@ -8,11 +8,12 @@ import { IoNotificationsOutline } from "react-icons/io5";
 import { MdDeleteOutline } from "react-icons/md";
 import AllFriendHook from '../../hooks/AllFriendHook';
 import { HashLoader } from 'react-spinners';
-import { Timeline } from '../../context/Context';
+import {  TimelineSite } from '../../context/Context';
+import { toast } from 'react-toastify';
 
 
 const FriendDetails = () => {
-  const {time,setTime}=useContext(Timeline)
+  const {time,setTime}=useContext(TimelineSite)
     const {id}=useParams()
 console.log(id);
 const {friends,loading}=AllFriendHook()
@@ -20,16 +21,28 @@ const {friends,loading}=AllFriendHook()
 const expectedFriend=friends.find(friend=>friend.id==parseInt(id));
 console.log(expectedFriend)
 
-
 const handleAction = (type) => {
   const newEntry = {
     ...expectedFriend,
     action: type,
-    date: new Date().toLocaleDateString()
+    date: new Date().toLocaleString()
   };
 
   setTime([...time, newEntry]);
+
+  toast.success(`${type} added for ${expectedFriend.name}`);
 };
+// const handleAction = () => {
+//   // const newEntry = {
+//   //   ...expectedFriend,
+//   //   action: type,
+//   //   date: new Date().toLocaleDateString()
+//   // };
+
+//   // setTime([...time, newEntry]);
+//   setTime([...time,expectedFriend])
+//   toast.success(`${expectedFriend.name} installed successfully`)
+// };
 
 if(loading){
         return <div className=' flex justify-center items-center'>

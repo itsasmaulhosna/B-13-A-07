@@ -16,6 +16,7 @@ if(status==='Overdue'){
     }
     return (
         <Link to={`/friendDetails/${friend.id}`} className="card bg-base-100  shadow-xl">
+            
   <figure>
     <img
        src={friend.picture}  className='rounded-full'/>
