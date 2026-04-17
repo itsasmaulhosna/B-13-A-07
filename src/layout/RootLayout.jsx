@@ -11,7 +11,8 @@ const RootLayout = () => {
             <Navbar></Navbar>
             <Outlet></Outlet>
             <Footer></Footer>
-            <ToastContainer />
+            <ToastContainer position= "top-center"
+/>
 
         </div>
     );

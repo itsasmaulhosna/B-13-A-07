@@ -7,12 +7,12 @@ const Error = () => {
       
       <div className="text-center">
         
-        {/* 404 Text */}
-        <h1 className="text-8xl md:text-9xl font-extrabold text-gray-800">
+        
+        <h1 className="text-8xl md:text-9xl font-extrabold text-[#244d3f]">
           404
         </h1>
 
-        {/* Message */}
+        
         <p className="text-xl md:text-2xl text-gray-600 mt-4">
           Oops! Page not found
         </p>
@@ -21,9 +21,9 @@ const Error = () => {
           The page you are looking for doesn’t exist.
         </p>
 
-        {/* Button */}
+        
         <Link to="/">
-          <button className="mt-6 px-6 py-3 bg-black text-white rounded-xl hover:bg-gray-800 transition duration-300">
+          <button className="mt-6 px-6 py-3 bg-[#244d3f] text-white rounded-xl hover:bg-gray-800 transition duration-300">
             Go Back Home
           </button>
         </Link>

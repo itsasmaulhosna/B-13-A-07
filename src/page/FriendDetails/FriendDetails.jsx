@@ -30,19 +30,11 @@ const handleAction = (type) => {
 
   setTime([...time, newEntry]);
 
-  toast.success(`${type} added for ${expectedFriend.name}`);
-};
-// const handleAction = () => {
-//   // const newEntry = {
-//   //   ...expectedFriend,
-//   //   action: type,
-//   //   date: new Date().toLocaleDateString()
-//   // };
+  toast.success(`${type} added for ${expectedFriend.name}`),{
+    position: "top-center"
 
-//   // setTime([...time, newEntry]);
-//   setTime([...time,expectedFriend])
-//   toast.success(`${expectedFriend.name} installed successfully`)
-// };
+  }
+};
 
 if(loading){
         return <div className=' flex justify-center items-center'>

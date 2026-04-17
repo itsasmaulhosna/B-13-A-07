@@ -1,16 +1,24 @@
-# React + Vite
+# Name of Project:
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+KeenKeeper
 
-Currently, two official plugins are available:
+## A Short Description:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+KeenKeeper is a modern React-based app to track and visualize friendship activities like calls, texts, and video interactions through a timeline and analytics dashboard.
 
-## React Compiler
+## Technologies I Used:
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+** React.js
+** Tailwind CSS
+** Recharts (for data visualization)
+** React Icons
+** Context API (State Management)
+** React Hooks (useState, useContext, useRef)
 
-## Expanding the ESLint configuration
+## 3 Key Features:
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+1.  Interactive Timeline Track all user activities (Text, Call, Video) in a clean and responsive timeline view with icons and timestamps.
+
+2.  Analytics Dashboard Visual representation of communication data using pie charts to show distribution of different interaction types.
+
+3.  Smart Filtering System Easily filter timeline data by Text, Call, Video, or view all activities dynamically with a dropdown filter.

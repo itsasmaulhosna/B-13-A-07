@@ -6,7 +6,7 @@ import { TimelineSite } from '../../context/Context';
 import { IoCall } from "react-icons/io5";
 import { LuMessageCircleMore } from "react-icons/lu";
 import { IoVideocamOutline } from "react-icons/io5";
-
+import { FiClock } from "react-icons/fi";
 
 const Timeline = () => {
      const {friends,loading}=AllFriendHook()
@@ -37,7 +37,7 @@ const Timeline = () => {
         }
      }
     return (
-        <div className='container mx-auto my-10 space-y-5 pl-20'>
+        <div className='container mx-auto my-10 space-y-5 lg:pl-20'>
             <h2 className='text-5xl font-bold text-black'>Timeline</h2>
             <div className='flex  my-3'>
     <details ref={dropdownRef}  className="dropdown w-72">
@@ -58,7 +58,26 @@ const Timeline = () => {
 </div>
             
             {
-                time.length===0?(<p className='text-2xl font-bold text-center bg-gray-100 py-20 rounded-xl'>No activity yet</p>)
+                time.length===0?(
+                    <div className="flex flex-col items-center justify-center bg-gray-100 py-20 rounded-2xl shadow-md space-y-4">
+    
+    
+    <div className="bg-white p-4 rounded-full shadow">
+      <FiClock className="text-4xl text-gray-500" />
+    </div>
+
+    
+    <h2 className="text-2xl font-bold text-gray-700">
+      No Activity Yet
+    </h2>
+
+    <p className="text-gray-500 text-center max-w-sm">
+      Your timeline is empty. Start interacting to see your activity here.
+    </p>
+
+  </div>
+
+                )
                 :
                 <>
                 {
