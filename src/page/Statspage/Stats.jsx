@@ -5,6 +5,20 @@ import { TimelineSite } from '../../context/Context';
 
 const Stats = () => {
       const {time}=useContext(TimelineSite)
+
+       if (time.length === 0) {
+    return (
+      <div className='container mx-auto my-6'>
+        <h2 className='text-4xl font-bold text-center'>
+          Friendship Analysis
+        </h2>
+
+        <p className='text-2xl font-bold text-center bg-gray-100 py-20 rounded-xl mt-5'>
+          No activity yet
+        </p>
+      </div>
+    );
+  }
     
       const text = time.filter(item => item.action === "text").length;
 const call = time.filter(item => item.action === "call").length;
@@ -21,39 +35,38 @@ const video = time.filter(item => item.action === "video").length;
             <h2 className='text-4xl font-bold text-center'>
         Friendship Analysis
       </h2>
-<div className='bg-gray-100 shadow-xl rounded-2xl p-6 mx-15 flex flex-col md:flex-row items-center justify-between'>
-            <div className='space-y-4 md:w-1/2'>
-            <div className='text-lg font-semibold text-gray-700 text-left'>
-            By Interaction
-          </div>
-                  <div className='md:w-1/2 w-full  flex justify-center items-center '>
-                 
-                    <PieChart style={{ width: '100%', maxWidth: '500px', maxHeight: '80vh', aspectRatio: 1,margin: ' auto' }} responsive>
-             <Pie
-                data={data}
-                 innerRadius="80%"
-                 outerRadius="100%"
-        //         // Corner radius is the rounded edge of each pie slice
-                 cornerRadius="50%"
-                fill="#8884d8"
-        //         // padding angle is the gap between each pie slice
-                 paddingAngle={5}
-                dataKey="value"
-                isAnimationActive={true}
-              />
-         <Legend/>
+<div className='bg-gray-100 shadow-xl rounded-2xl py-10 mx-25 flex flex-col md:flex-row '>
+            
+            <div className='md:w-1/2 w-full flex justify-center'>
+              <div className='space-y-4 md:w-1/2 w-full text-center md:text-left '>
+        <div className='text-lg font-semibold text-gray-700'>
+          By Interaction
+        </div>
+      </div>
+            </div>
 
-         <Tooltip/>
-            </PieChart> 
-                    </div>
+      {/* Chart */}
+      <div className='md:w-1/2 w-full flex  items-center'>
+        <PieChart width={300} height={300}>
+          <Pie
+            data={data}
+            innerRadius={100}
+            outerRadius={120}
+            cornerRadius={50}
+            paddingAngle={5}
+            dataKey="value"
+          />
+          <Legend />
+          <Tooltip />
+        </PieChart>
+      </div>
+
                   
                   </div>
 
             
             </div>
 
-
-</div>
         
         
     );

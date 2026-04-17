@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState,useRef } from 'react';
 import { RiArrowDropDownLine } from "react-icons/ri";
 import AllFriendHook from '../../hooks/AllFriendHook';
 import {HashLoader} from 'react-spinners';
@@ -12,6 +12,16 @@ const Timeline = () => {
      const {friends,loading}=AllFriendHook()
      const {time}=useContext(TimelineSite)
      console.log(friends,loading);
+     const [filter, setFilter] = useState("all");
+     const dropdownRef = useRef(null);
+     const handleFilter = (type) => {
+  setFilter(type);
+  dropdownRef.current.removeAttribute("open");
+};
+     const filteredData =
+  filter === "all"
+    ? time
+    : time.filter(item => item.action === filter);
      const getIcon=(action)=>{
         if(action==='call'){
             return<IoCall className='text-gray-600' />
@@ -29,14 +39,23 @@ const Timeline = () => {
     return (
         <div className='container mx-auto my-10 space-y-5 pl-20'>
             <h2 className='text-5xl font-bold text-black'>Timeline</h2>
-            <div className='relative w-72'>
-                <input type='text' placeholder='Filter timeline' className="border rounded-lg px-4 py-2 text-gray-600 shadow-lg"/>
-              <RiArrowDropDownLine
-    size={24}
-    className="absolute right-20 top-1/2 -translate-y-1/2 text-gray-500 pointer-events-none"
-/>
-
-            </div>
+            <div className='flex  my-3'>
+    <details ref={dropdownRef}  className="dropdown w-72">
+  <summary className="btn m-1 px-20 relative text-gray-400 ">Filter Timeline
+    <RiArrowDropDownLine
+      size={24}
+      className="absolute right-10 top-1/2 -translate-y-1/2 text-gray-900 pointer-events-none"
+  />
+  </summary>
+  
+  <ul className="menu dropdown-content bg-base-100 rounded-box z-10 w-52 p-2 shadow-sm">
+    <li><a onClick={() => handleFilter("text")}>Text</a></li>
+    <li><a onClick={() =>handleFilter ("call")}>Call</a></li>
+    <li><a onClick={() => handleFilter("video")}>Video</a></li>
+    <li><a onClick={() => handleFilter("all")}>All</a></li>
+  </ul>
+</details>
+</div>
             
             {
                 time.length===0?(<p className='text-2xl font-bold text-center bg-gray-100 py-20 rounded-xl'>No activity yet</p>)
@@ -50,7 +69,7 @@ const Timeline = () => {
                 )
                 :
                 (
-                    time.map(item=>{
+                    filteredData.map(item=>{
                     return    <div className='bg-white shadow-lg rounded-xl p-5 flex items-center gap-4 border-l-4 border-gray-200'>
                         <div className="text-2xl">
       {getIcon(item.action)}
