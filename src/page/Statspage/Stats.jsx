@@ -9,7 +9,7 @@ const Stats = () => {
        if (time.length === 0) {
     return (
       <div className='container mx-auto my-6 flex flex-col items-center justify-cente space-y-5'>
-        <h2 className='text-4xl font-bold text-center'>
+        <h2 className='text-3xl md:text-4xl font-bold text-center'>
           Friendship Analysis
         </h2>
 

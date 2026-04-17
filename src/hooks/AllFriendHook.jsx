@@ -10,7 +10,7 @@ const AllFriendHook = () => {
     setTimeout(() => {
         setFriend(data);
         setLoading(false);
-    }, 1000);
+    }, 500);
         
     }
     fetchData();

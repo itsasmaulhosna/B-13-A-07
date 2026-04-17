@@ -10,14 +10,14 @@ const Friends = () => {
     // console.log(friends)
     return (
         <div className='container mx-auto pt-10 mb-20 '>
-           <h2 className='text-xl font-semibold mb-5'>Your Friends</h2>
+           <h2 className='text-xl font-semibold text-center lg:text-left mb-5'>Your Friends</h2>
            {
             loading? (<div className='flex justify-center items-center'>
                    <HashLoader color="#244d3f" /> 
                 </div>)
                 :
            (
-            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>
+            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3  lg:gap-8'>
             {
                 friends.map(friend=>{
                  return   <FriendCard friend={friend}></FriendCard>

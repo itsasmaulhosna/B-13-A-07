@@ -1,10 +1,14 @@
 # Name of Project:
 
-KeenKeeper
+KeenKeeper(FriendShip Management App)
 
 ## A Short Description:
 
 KeenKeeper is a modern React-based app to track and visualize friendship activities like calls, texts, and video interactions through a timeline and analytics dashboard.
+
+## Live Demo:
+
+https://storied-haupia-31c239.netlify.app/
 
 ## Technologies I Used:
 
@@ -17,8 +21,11 @@ KeenKeeper is a modern React-based app to track and visualize friendship activit
 
 ## 3 Key Features:
 
-1.  Interactive Timeline Track all user activities (Text, Call, Video) in a clean and responsive timeline view with icons and timestamps.
+1.Interactive Timeline:
+Track all user activities (Text, Call, Video) in a clean and responsive timeline view with icons and timestamps.
 
-2.  Analytics Dashboard Visual representation of communication data using pie charts to show distribution of different interaction types.
+2.Analytics Dashboard:
+Visual representation of communication data using pie charts to show distribution of different interaction types.
 
-3.  Smart Filtering System Easily filter timeline data by Text, Call, Video, or view all activities dynamically with a dropdown filter.
+3. Smart Filtering System:
+   Easily filter timeline data by Text, Call, Video, or view all activities dynamically with a dropdown filter.

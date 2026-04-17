@@ -10,14 +10,14 @@ import { TfiStatsUp } from "react-icons/tfi";
 const Navbar = () => {
     return (
         <div className='shadow'>
-<div className='container mx-auto flex items-center justify-between py-4'>
-    <div>
+<div className='container mx-auto flex flex-col md:flex-row items-center justify-center md:justify-between py-4 px-4 gap-4'>
+    {/* <div> */}
         <h2 className='text-3xl font-bold'>Keen
             <span className='text-3xl font-semibold text-[#244d35]'>Keeper</span>
              </h2>
-    </div>
+    {/* </div> */}
     
-        <ul className='flex flex-col  md:flex-row items-center gap-6'>
+        <ul className='flex flex-col  md:flex-row items-center gap-4 md:gap-6'>
             <li >
                 <MyNavlink to={'/'}>
                 <IoMdHome />
