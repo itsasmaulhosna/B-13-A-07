@@ -18,10 +18,7 @@ export const router=createBrowserRouter([
     path:'/',
     element:<Home></Home>
 },
-{
-path:'/friend',
-element:<Friend></Friend>
-},
+
 {
 path:'/friendDetails/:id',
 element:<FriendDetails></FriendDetails>,
