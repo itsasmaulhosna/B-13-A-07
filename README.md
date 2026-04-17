@@ -6,10 +6,6 @@ KeenKeeper(FriendShip Management App)
 
 KeenKeeper is a modern React-based app to track and visualize friendship activities like calls, texts, and video interactions through a timeline and analytics dashboard.
 
-## Live Demo:
-
-https://storied-haupia-31c239.netlify.app/
-
 ## Technologies I Used:
 
 ** React.js
